@@ -16,33 +16,39 @@ Warning: Just loading this plugin might freeze or slowdown your IDE, it's big.
 3. The fly will "collide" with any `Area2D`, and will eat any that is part of the group `fly_food`.
 4. If you want to contain the fly, make sure to decrease the limiting rect in the inspector.
 
-This plugin contains some supporting files that contains the neurons and what they mean. If you want information on these, go to the How it was done section listed above.
+This plugin contains some supporting files that contains the neurons and what they mean. If you want information on these, go [here](./DataProcessing/README.md).
  2 files are important for understanding and using this:
  `drosophila.gd` and `brain.gd`
 
 ### Brain
-    This file loads up all the neurons, weights and manages the connections. You can modify this file slightly if you want to stimulate specific neurons on specific ways. The current iteration is pretty blunt, just stimulate all neurons of one fuction of one side the same ammount. It probably feels like inhalling a m3 of clorine.
+   This file loads up all the neurons, weights and manages the connections. 
+    You can modify this file slightly if you want to stimulate specific neurons on specific ways. 
+    The current iteration is pretty blunt, just stimulate all neurons of one fuction of one side the same ammount. 
+    It probably feels like inhalling a m3 of clorine.
 
 #### How movement is simulated
-    There are just too many neurons and I could not find anything more fine tunned about what each does. So, the movement calculation is pretty simple: Sum all the values the neuron VHC related neurons of each side (divide by 100 because it is too much), and move the animal to the side of which this value was bigger a proportional ammount.
+   There are just too many neurons and I could not find anything more fine tunned about what each does. 
+    So, the movement calculation is pretty simple: 
+    Sum all the values the neuron VHC related neurons of each side (divide by 100 because it is too much), and move the animal to the side of which this value was bigger a proportional ammount.
 
 #### How neurons are stimulated
-    Neurons are stimulated using `dendrite_accumulate` that will simply add up each neuron weight to its connections.
+   Neurons are stimulated using `dendrite_accumulate` that will simply add up each neuron weight to its connections.
  
 ####
 ### Drosophila
-    This file is just a simplistic way to interact with the brain. Built mostly as an example because I, frankly, have no idea on what to do with this brain. Hence, open source.
+   This file is just a simplistic way to interact with the brain. Built mostly as an example because I, frankly, have no idea on what to do with this brain. Hence, open source.
     Some utility flags and variables:
     accumleft and accumright are what holds the accumulated values of the (sort of) "motor" neurons. 
     All the next are arrays of 2 booleans, representing [left, right]
-    - stimulate_vision
-    - stimulate_olfactory
-    - stimulate_warm
-    - stimulate_cold
-    - stimulate_taste_external
-    - stimulate_taste_internal
+    
+     stimulate_vision
+     stimulate_olfactory
+     stimulate_warm
+     stimulate_cold
+     stimulate_taste_external
+     stimulate_taste_internal
 
-    To use them, if in drosophila code you do: 
+   To use them, if in drosophila code you do: 
     ```Brain.stimulate_vision = [true, false]```  
     All the neurons related to vision on the left side will be stimulated (dendrite_accumulate will run on them)
 
