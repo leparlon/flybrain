@@ -36,8 +36,8 @@ This plugin contains some supporting files that contains the neurons and what th
  
 ####
 ### Drosophila
-   This file is just a simplistic way to interact with the brain. Built mostly as an example because I, frankly, have no idea on what to do with this brain. Hence, open source.
-    Some utility flags and variables:
+   This file is just a simplistic way to interact with the brain. Built mostly as an example because I, frankly, have no idea on what to do with this brain. Hence, open source.  
+   Some utility flags and variables:  
     accumleft and accumright are what holds the accumulated values of the (sort of) "motor" neurons. 
     All the next are arrays of 2 booleans, representing [left, right]
     
