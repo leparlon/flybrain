@@ -3,7 +3,7 @@ Information on how this was done: [How it was done](./DataProcessing/README.md)
 
 Similar to WormBrain, this GODOT plugin is simulating a drosophila fly brain (fruit fly), using a similar map. Since this animal is much more complex, the simulation is much much worse.
 
-Warning: Just loading this plugin might freeze or slowdown your IDE, it's big.
+# Warning: Just loading this plugin might freeze or slowdown your IDE, it's big.
 
 ## Installation
 1. Download the plugin from the Godot Asset Library or clone the repository.
