@@ -29,7 +29,7 @@ This plugin contains some supporting files that contains the neurons and what th
 #### How movement is simulated
    There are just too many neurons and I could not find anything more fine tunned about what each does. 
     So, the movement calculation is pretty simple: 
-    Sum all the values the neuron VHC related neurons of each side (divide by 100 because it is too much), and move the animal to the side of which this value was bigger a proportional ammount.
+    Sum all the values the neuron VHC related neurons of each side (divide by 100 because it is too much), and move the sprite to the side of which this value was bigger a proportional ammount.
 
 #### How neurons are stimulated
    Neurons are stimulated using `dendrite_accumulate` that will simply add up each neuron weight to its connections.
