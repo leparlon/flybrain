@@ -1,0 +1,5 @@
+Copy the addons folder into the root of your godot project.
+Go to Project -> Project Settings -> Plugins and enable the plugin
+
+Go to any 2d scene and add a "FlyNode" to it, its invisible on the editor (I'm not that good at godot), 
+so drag it to somewhere relevant.
